@@ -1,64 +1,13 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>购物车 - METrend</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-top">
-        <div class="container">
-          <div class="top-links">
-            <a href="index.html">首页</a>
-            <a href="#">帮助中心</a>
-            <a href="#">售后服务</a>
-          </div>
-          <div class="top-account">
-            <a href="#">登录</a>
-            <span class="divider">|</span>
-            <a href="#">注册</a>
-          </div>
-        </div>
-      </div>
+# METrend Storefront
 
-      <div class="header-main">
-        <div class="container">
-          <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">ME<span>Trend</span></div>
-          <div class="search-bar">
-            <input type="text" placeholder="搜索产品、品牌、分类..." class="search-input" />
-            <button class="search-btn" aria-label="搜索">🔍</button>
-          </div>
-          <div class="header-icons">
-            <div class="icon-item" onclick="window.location.href='cart.html'">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-              <span class="cart-count">0</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+This is a static storefront for a Middle East cross-border ecommerce brand, with multilingual support and product/cart flows.
 
-    <main class="page-shell">
-      <div class="container">
-        <div class="cart-page">
-          <div class="cart-header">
-            <h2>购物车</h2>
-            <button class="secondary-btn" onclick="window.location.href='index.html'">继续购物</button>
-          </div>
-          <div id="cart-root"></div>
-        </div>
-      </div>
-    </main>
+## Files
+- index.html: main storefront home page
+- product.html: product detail page
+- cart.html: cart page
+- styles.css: styling
+- script.js: dynamic product data, cart logic, and language switching
 
-    <script src="script.js"></script>
-  </body>
-</html>
+## Contact
+Email: 2788991511@qq.com
