@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>产品详情 - METrend</title>
+    <meta name="description" content="查看 METrend 购物车中的商品。" />
+    <title>购物车 - METrend</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -11,48 +12,19 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-top">
-        <div class="container">
-          <div class="top-links">
-            <a href="index.html">首页</a>
-            <a href="#">帮助中心</a>
-            <a href="#">售后服务</a>
-          </div>
-          <div class="top-account">
-            <a href="#">登录</a>
-            <span class="divider">|</span>
-            <a href="#">注册</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-main">
-        <div class="container">
-          <div class="logo" onclick="window.location.href='index.html'" style="cursor:pointer;">ME<span>Trend</span></div>
-          <div class="search-bar">
-            <input type="text" placeholder="搜索产品、品牌、分类..." class="search-input" />
-            <button class="search-btn" aria-label="搜索">🔍</button>
-          </div>
-          <div class="header-icons">
-            <div class="icon-item" onclick="window.location.href='cart.html'">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-              </svg>
-              <span class="cart-count">0</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="header-top"><div class="container">
+        <div class="top-links"><a href="index.html">首页</a><a href="index.html#products">继续购物</a></div>
+        <div class="top-account"><button class="lang-btn" onclick="toggleLanguage()" aria-label="切换语言">中文 / EN / العربية</button></div>
+      </div></div>
+      <div class="header-main"><div class="container">
+        <a class="logo" href="index.html">ME<span>Trend</span></a>
+        <a class="icon-item cart-link" href="cart.html" aria-label="购物车">🛒 <span class="cart-count">0</span></a>
+      </div></div>
     </header>
-
-    <main class="page-shell">
-      <div class="container">
-        <div id="product-detail"></div>
-      </div>
-    </main>
-
+    <main class="page-shell"><div class="container">
+      <h1 data-i18n="cartTitle">购物车</h1>
+      <div id="cart-root"></div>
+    </div></main>
     <script src="script.js"></script>
   </body>
 </html>

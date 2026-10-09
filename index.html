@@ -23,7 +23,7 @@
             <span class="divider">|</span>
             <a href="#" data-i18n="register">注册</a>
             <span class="divider">|</span>
-            <button class="lang-btn" onclick="toggleLanguage()">EN / عرب</button>
+            <button class="lang-btn" onclick="toggleLanguage()" aria-label="切换语言">中文 / EN / العربية</button>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <section class="banner">
         <div class="carousel">
           <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80" alt="Banner 1" />
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80" alt="Dubai skyline" />
             <div class="carousel-caption">
               <h2 data-i18n="heroTitle1">中东热销产品</h2>
               <p data-i18n="heroText1">发现最受欢迎的跨境电商商品</p>
@@ -108,7 +108,7 @@
         </div>
       </section>
 
-      <section class="products">
+      <section class="products" id="products">
         <div class="container">
           <div class="products-header">
             <h2 data-i18n="hotProducts">热销商品</h2>
@@ -130,20 +130,20 @@
             <div class="shop-card">
               <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=400&q=80" alt="Shop 1" />
               <h3 data-i18n="shop1">家居生活馆</h3>
-              <p>⭐ 4.9分 | 月销5.2万</p>
-              <button class="shop-btn" data-i18n="enterShop">进入店铺</button>
+              <p data-i18n="shop1Text">让日常居家更轻松</p>
+              <button class="shop-btn" onclick="filterCategory('home')" data-i18n="enterShop">浏览商品</button>
             </div>
             <div class="shop-card">
               <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=400&q=80" alt="Shop 2" />
               <h3 data-i18n="shop2">美妆护肤专营</h3>
-              <p>⭐ 4.8分 | 月销3.8万</p>
-              <button class="shop-btn" data-i18n="enterShop">进入店铺</button>
+              <p data-i18n="shop2Text">日常护肤与个人护理</p>
+              <button class="shop-btn" onclick="filterCategory('beauty')" data-i18n="enterShop">浏览商品</button>
             </div>
             <div class="shop-card">
               <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&q=80" alt="Shop 3" />
               <h3 data-i18n="shop3">厨房电器城</h3>
-              <p>⭐ 4.7分 | 月销4.1万</p>
-              <button class="shop-btn" data-i18n="enterShop">进入店铺</button>
+              <p data-i18n="shop3Text">为家庭烹饪挑选实用好物</p>
+              <button class="shop-btn" onclick="filterCategory('kitchen')" data-i18n="enterShop">浏览商品</button>
             </div>
           </div>
         </div>
@@ -183,8 +183,7 @@
           <div class="footer-col">
             <h4 data-i18n="contactUs">联系我们</h4>
             <p>📧 <a href="mailto:2788991511@qq.com">2788991511@qq.com</a></p>
-            <p>📱 +966-800-123-456</p>
-            <p>💬 在线客服 (24/7)</p>
+            <p data-i18n="supportEmail">邮件咨询商品与配送</p>
           </div>
         </div>
         <div class="footer-bottom">

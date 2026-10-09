@@ -30,11 +30,12 @@ const i18n = {
     heroTitle3: '极速配送', heroText3: '快速送达，贴心服务',
     todayRecommend: '🔥 今日推荐', viewAll: '查看全部 →', hotProducts: '热销商品',
     sortHot: '热销排序', sortNew: '最新上架', sortPriceLow: '价格低到高', sortPriceHigh: '价格高到低',
-    recommendedStores: '推荐店铺', shop1:'家居生活馆', shop2:'美妆护肤专营', shop3:'厨房电器城', enterShop:'进入店铺',
+    recommendedStores: '按品类逛逛', shop1:'家居生活', shop2:'美妆个护', shop3:'厨房好物', shop1Text:'让日常居家更轻松', shop2Text:'日常护肤与个人护理', shop3Text:'为家庭烹饪挑选实用好物', enterShop:'浏览商品',
     footerAbout:'关于我们', aboutIntro:'公司介绍', brandStory:'品牌故事', newsCenter:'新闻中心', jobs:'工作机会',
     service:'服务保障', policyAfter:'售后政策', returnPolicy:'退货政策', feedback:'投诉反馈', privacy:'隐私保护',
     guide:'购物指南', shoppingFlow:'购物流程', payment:'支付方式', shipping:'物流配送', faq:'常见问题',
-    contactUs:'联系我们'
+    contactUs:'联系我们', supportEmail:'邮件咨询商品与配送', stock:'库存', units:'件', soldOut:'暂时缺货', cartTitle:'购物车', emptyCart:'购物车还是空的，先挑几件好东西吧', itemCount:'商品总数', checkout:'邮件提交订单',
+    checkoutNote:'点击后会打开邮件草稿，请核对收件信息与订单；商家确认后才算下单。', noResults:'没有找到匹配的商品'
   },
   en: {
     helpCenter: 'Help Center', afterSales: 'After-sales', aboutUs: 'About Us', login: 'Login', register: 'Register',
@@ -44,11 +45,12 @@ const i18n = {
     heroTitle3: 'Fast Shipping', heroText3: 'Speedy delivery and care',
     todayRecommend: '🔥 Today’s Picks', viewAll: 'View All →', hotProducts: 'Hot Products',
     sortHot: 'Top Sellers', sortNew: 'Latest', sortPriceLow: 'Price: Low to High', sortPriceHigh: 'Price: High to Low',
-    recommendedStores: 'Recommended Stores', shop1:'Home Living Store', shop2:'Beauty Care Store', shop3:'Kitchen Appliances Hub', enterShop:'Visit Store',
+    recommendedStores: 'Shop by category', shop1:'Home & Living', shop2:'Beauty & Care', shop3:'Kitchen Finds', shop1Text:'Thoughtful picks for everyday living', shop2Text:'Everyday skincare and personal care', shop3Text:'Useful finds for home cooking', enterShop:'Browse products',
     footerAbout:'About Us', aboutIntro:'Company Intro', brandStory:'Brand Story', newsCenter:'News Center', jobs:'Careers',
     service:'Service', policyAfter:'After-sales Policy', returnPolicy:'Return Policy', feedback:'Support', privacy:'Privacy',
     guide:'Shopping Guide', shoppingFlow:'Shopping Flow', payment:'Payment', shipping:'Shipping', faq:'FAQ',
-    contactUs:'Contact Us'
+    contactUs:'Contact Us', supportEmail:'Email us about products and delivery', stock:'Stock', units:'left', soldOut:'Out of stock', cartTitle:'Shopping cart', emptyCart:'Your cart is empty. Find something you love.', itemCount:'Items', checkout:'Send order by email',
+    checkoutNote:'This opens an email draft. Please confirm delivery details; the store must confirm your order.', noResults:'No matching products found'
   },
   ar: {
     helpCenter: 'مركز المساعدة', afterSales: 'خدمة ما بعد البيع', aboutUs: 'معلومات عنا', login: 'تسجيل الدخول', register: 'تسجيل',
@@ -58,19 +60,28 @@ const i18n = {
     heroTitle3: 'شحن سريع', heroText3: 'تسليم سريع وخدمة مميزة',
     todayRecommend: '🔥 اختيارات اليوم', viewAll: 'عرض الكل →', hotProducts: 'منتجات رائجة',
     sortHot: 'الأكثر مبيعًا', sortNew: 'الأحدث', sortPriceLow: 'السعر: من الأقل إلى الأعلى', sortPriceHigh: 'السعر: من الأعلى إلى الأقل',
-    recommendedStores: 'المتاجر الموصى بها', shop1:'متجر المنزل', shop2:'متجر العناية بالجمال', shop3:'مركز الأجهزة المنزلية', enterShop:'زيارة المتجر',
+    recommendedStores: 'تسوّق حسب الفئة', shop1:'المنزل والمعيشة', shop2:'الجمال والعناية', shop3:'اختيارات المطبخ', shop1Text:'منتجات مختارة لحياة يومية أسهل', shop2Text:'العناية بالبشرة والاحتياجات اليومية', shop3Text:'اختيارات عملية لمطبخ الأسرة', enterShop:'تصفّح المنتجات',
     footerAbout:'معلومات عنا', aboutIntro:'عن الشركة', brandStory:'قصة العلامة', newsCenter:'الأخبار', jobs:'فرص العمل',
     service:'الخدمات', policyAfter:'سياسة ما بعد البيع', returnPolicy:'سياسة الإرجاع', feedback:'الشكاوى', privacy:'الخصوصية',
     guide:'دليل التسوق', shoppingFlow:'دليل الشراء', payment:'الدفع', shipping:'التوصيل', faq:'الأسئلة الشائعة',
-    contactUs:'تواصل معنا'
+    contactUs:'تواصل معنا', supportEmail:'راسلنا للاستفسار عن المنتجات والتوصيل', stock:'المخزون', units:'متوفر', soldOut:'نفد من المخزون', cartTitle:'سلة التسوق', emptyCart:'سلتك فارغة. اكتشف منتجاتنا المميزة.', itemCount:'عدد المنتجات', checkout:'إرسال الطلب بالبريد الإلكتروني',
+    checkoutNote:'سيُفتح مسودّة بريد إلكتروني. يرجى مراجعة تفاصيل التوصيل؛ يؤكد المتجر الطلب لاحقًا.', noResults:'لم يتم العثور على منتجات مطابقة'
   }
 };
 
-let currentLanguage = 'zh';
+let currentLanguage = ['zh', 'en', 'ar'].includes(localStorage.getItem('metrend_language'))
+  ? localStorage.getItem('metrend_language')
+  : 'zh';
+let activeCategory = 'all';
+let activeSort = 'hot';
+let searchTerm = '';
+let currentCarouselIndex = 0;
 
 function setLanguage(lang) {
   currentLanguage = lang;
   document.documentElement.lang = lang === 'ar' ? 'ar' : (lang === 'en' ? 'en' : 'zh');
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  localStorage.setItem('metrend_language', lang);
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (i18n[lang] && i18n[lang][key]) {
@@ -93,7 +104,13 @@ const CART_KEY = 'metrend_cart';
 
 function getCart() {
   const raw = localStorage.getItem(CART_KEY);
-  return raw ? JSON.parse(raw) : [];
+  if (!raw) return [];
+  try {
+    const cart = JSON.parse(raw);
+    return Array.isArray(cart) ? cart.filter((item) => Number.isInteger(item.id) && Number.isInteger(item.qty) && item.qty > 0) : [];
+  } catch {
+    return [];
+  }
 }
 
 function saveCart(cartItems) {
@@ -105,10 +122,17 @@ function openProductPage(productId) {
   window.location.href = 'product.html';
 }
 
+function buyNow(productId, productName) {
+  addToCart(productId, productName);
+  window.location.href = 'cart.html';
+}
+
 function addToCart(productId, productName) {
+  const product = products.find((item) => item.id === productId);
+  if (!product || product.stock < 1) return;
   const cart = getCart();
   const existing = cart.find((item) => item.id === productId);
-  if (existing) existing.qty += 1;
+  if (existing) existing.qty = Math.min(existing.qty + 1, product.stock);
   else cart.push({ id: productId, qty: 1 });
   saveCart(cart);
   updateCartCount();
@@ -143,7 +167,21 @@ function renderProducts(filteredProducts = products) {
   const grid = document.getElementById('product-grid');
   if (!grid) return;
 
-  grid.innerHTML = filteredProducts.map((product) => {
+  const visibleProducts = filteredProducts.filter((product) => {
+    if (activeCategory !== 'all' && product.category !== activeCategory) return false;
+    if (!searchTerm) return true;
+    const searchable = [product.name, product.nameEn, product.nameAr, product.category].join(' ').toLowerCase();
+    return searchable.includes(searchTerm.toLowerCase());
+  });
+  if (activeSort === 'new') visibleProducts.reverse();
+  if (activeSort === 'price-low') visibleProducts.sort((a, b) => a.price - b.price);
+  if (activeSort === 'price-high') visibleProducts.sort((a, b) => b.price - a.price);
+  if (!visibleProducts.length) {
+    grid.innerHTML = `<p class="empty-results">${i18n[currentLanguage].noResults}</p>`;
+    return;
+  }
+
+  grid.innerHTML = visibleProducts.map((product) => {
     const label = currentLanguage === 'en' ? product.badgeEn : (currentLanguage === 'ar' ? product.badgeAr : product.badge);
     const productName = currentLanguage === 'en' ? product.nameEn : (currentLanguage === 'ar' ? product.nameAr : product.name);
     return `
@@ -163,7 +201,7 @@ function renderProducts(filteredProducts = products) {
             <span class="current-price">$${product.price}</span>
             <span class="original-price">$${product.originalPrice}</span>
           </div>
-          <div class="product-stock ${product.stock < 10 ? 'low' : ''}">${product.stock > 0 ? `库存: ${product.stock}件` : '缺货'}</div>
+          <div class="product-stock ${product.stock < 10 ? 'low' : ''}">${product.stock > 0 ? `${i18n[currentLanguage].stock}: ${product.stock} ${i18n[currentLanguage].units}` : i18n[currentLanguage].soldOut}</div>
           <div class="product-actions">
             <button class="btn-cart" onclick="addToCart(${product.id}, '${productName}')">${currentLanguage === 'en' ? 'Add to Cart' : (currentLanguage === 'ar' ? 'أضف إلى السلة' : '加入购物车')}</button>
             <button class="btn-wishlist" onclick="addToWishlist()">❤️</button>
@@ -172,6 +210,16 @@ function renderProducts(filteredProducts = products) {
       </div>
     `;
   }).join('');
+}
+
+function filterCategory(category) {
+  activeCategory = category;
+  document.querySelectorAll('.nav-item').forEach((button) => {
+    const active = button.dataset.category === category;
+    button.classList.toggle('active', active);
+  });
+  renderProducts();
+  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
 }
 
 function renderFlashDeal() {
@@ -193,7 +241,7 @@ function renderFlashDeal() {
             <span class="current-price">$${product.price}</span>
             <span class="original-price">$${product.originalPrice}</span>
           </div>
-          <button class="btn-cart" onclick="addToCart(${product.id}, '${productName}')">${currentLanguage === 'en' ? 'Buy Now' : (currentLanguage === 'ar' ? 'اشتري الآن' : '立即抢购')}</button>
+          <button class="btn-cart" onclick="buyNow(${product.id}, '${productName}')">${currentLanguage === 'en' ? 'Buy Now' : (currentLanguage === 'ar' ? 'اشتري الآن' : '立即抢购')}</button>
         </div>
       </div>
     `;
@@ -232,7 +280,7 @@ function renderProductDetail() {
         </ul>
         <div class="detail-actions">
           <button class="primary-btn" onclick="addToCart(${product.id}, '${productName}')">${currentLanguage === 'en' ? 'Add to Cart' : (currentLanguage === 'ar' ? 'أضف إلى السلة' : '加入购物车')}</button>
-          <button class="secondary-btn" onclick="window.location.href='cart.html'">${currentLanguage === 'en' ? 'Buy Now' : (currentLanguage === 'ar' ? 'اشترِ الآن' : '立即购买')}</button>
+          <button class="secondary-btn" onclick="buyNow(${product.id}, '${productName}')">${currentLanguage === 'en' ? 'Buy Now' : (currentLanguage === 'ar' ? 'اشترِ الآن' : '立即购买')}</button>
         </div>
         <div class="detail-meta">
           <div class="meta-box"><strong>${currentLanguage === 'en' ? 'Shipping' : (currentLanguage === 'ar' ? 'الشحن' : '发货')}</strong> ${currentLanguage === 'en' ? '1-3 days' : (currentLanguage === 'ar' ? '1-3 أيام' : '1-3天')}</div>
@@ -249,7 +297,7 @@ function renderCartPage() {
   if (!root) return;
   const cart = getCart();
   if (!cart.length) {
-    root.innerHTML = '<div class="empty-cart">购物车还是空的，先挑几件好东西吧</div>';
+    root.innerHTML = `<div class="empty-cart">${i18n[currentLanguage].emptyCart}</div>`;
     return;
   }
 
@@ -280,11 +328,22 @@ function renderCartPage() {
       `).join('')}
     </div>
     <div class="cart-summary">
-      <div>商品总数：${cartItems.reduce((sum, item) => sum + item.qty, 0)}</div>
+      <div>${i18n[currentLanguage].itemCount}：${cartItems.reduce((sum, item) => sum + item.qty, 0)}</div>
       <div class="total-price">$${total}</div>
-      <button class="primary-btn" onclick="alert('下单成功！')">去结算</button>
+      <a class="primary-btn checkout-link" href="${buildOrderEmail(cartItems, total)}">${i18n[currentLanguage].checkout}</a>
     </div>
+    <p class="checkout-note">${i18n[currentLanguage].checkoutNote}</p>
   `;
+}
+
+function buildOrderEmail(items, total) {
+  const lines = items.map((item) => {
+    const name = currentLanguage === 'en' ? item.nameEn : (currentLanguage === 'ar' ? item.nameAr : item.name);
+    return `${name} × ${item.qty} — $${item.price * item.qty}`;
+  });
+  const subject = currentLanguage === 'ar' ? 'طلب جديد من METrend' : (currentLanguage === 'en' ? 'New METrend order request' : 'METrend 订单咨询');
+  const body = `${lines.join('\n')}\n\n${i18n[currentLanguage].itemCount}: ${items.reduce((sum, item) => sum + item.qty, 0)}\nTotal: $${total}\n\nPlease add your name, phone number, delivery city and address. The store will confirm availability, shipping and payment.`;
+  return `mailto:2788991511@qq.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function changeQty(productId, delta) {
@@ -304,6 +363,9 @@ function changeQty(productId, delta) {
 }
 
 function initIndexPage() {
+  searchTerm = localStorage.getItem('metrend_search') || '';
+  const searchInput = document.querySelector('.search-input');
+  if (searchInput) searchInput.value = searchTerm;
   setLanguage(currentLanguage);
   initCarousel();
   renderFlashDeal();
@@ -314,9 +376,8 @@ function initIndexPage() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.nav-item').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      const category = btn.dataset.category;
-      const filtered = category === 'all' ? products : products.filter((p) => p.category === category);
-      renderProducts(filtered);
+      activeCategory = btn.dataset.category;
+      renderProducts();
     });
   });
 
@@ -324,14 +385,39 @@ function initIndexPage() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.sort-btn').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      const sort = btn.dataset.sort;
-      let sorted = [...products];
-      if (sort === 'new') sorted.reverse();
-      else if (sort === 'price-low') sorted.sort((a, b) => a.price - b.price);
-      else if (sort === 'price-high') sorted.sort((a, b) => b.price - a.price);
-      renderProducts(sorted);
+      activeSort = btn.dataset.sort;
+      renderProducts();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      searchTerm = searchInput.value.trim();
+      localStorage.setItem('metrend_search', searchTerm);
+      renderProducts();
+    });
+  }
+}
+
+function wireSearch() {
+  const input = document.querySelector('.search-input');
+  const button = document.querySelector('.search-btn');
+  if (!input) return;
+  const submit = () => {
+    const value = input.value.trim();
+    localStorage.setItem('metrend_search', value);
+    if (document.getElementById('product-grid')) {
+      searchTerm = value;
+      renderProducts();
+      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = 'index.html#products';
+    }
+  };
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') submit();
+  });
+  button?.addEventListener('click', submit);
 }
 
 function initCarousel() {
@@ -375,6 +461,7 @@ if (document.getElementById('cart-root')) {
   renderCartPage();
   updateCartCount();
 }
+wireSearch();
 
 window.toggleLanguage = function () {
   const order = ['zh', 'en', 'ar'];
